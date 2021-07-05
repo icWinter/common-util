@@ -3,7 +3,6 @@ package com.cn.stardust.tool.codegen.generate;
 import com.cn.stardust.tool.codegen.CamelCaseConvert;
 
 import java.io.File;
-import java.sql.BatchUpdateException;
 
 /**
  * https://github.com/KnowNoUnknown
@@ -97,7 +96,7 @@ final public class ControllerGenerator extends AbstractGenerator{
          */
         buffer.append(Character.getSpace(4) + "@ApiOperation(value = \"删除"
                 +CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName())+"\")"+ Character.LINE_FEED);
-        buffer.append(Character.getSpace(4) + "@GetMapping(\"/remove\")"+ Character.LINE_FEED);
+        buffer.append(Character.getSpace(4) + "@PostMapping(\"/remove\")"+ Character.LINE_FEED);
         buffer.append(Character.getSpace(4) + "public ReturnData remove(");
         buffer.append("@RequestParam(\""+CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName()) +"Id\")");
         buffer.append("String ").append(CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName()) +"Id)");
