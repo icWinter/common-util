@@ -195,7 +195,7 @@ final class MapperGenerator extends AbstractGenerator {
                 .append("\"</foreach>\"+").append(Character.LINE_FEED)
                 .append(Character.getSpace(8))
                 .append("\"</script>\"})").append(Character.LINE_FEED);
-        buffer.append(Character.getSpace(4) + "void insert(")
+        buffer.append(Character.getSpace(4) + "void batchInsert(")
                 .append("@Param(\"").append(CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName())).append("s")
                 .append("\")List<");
         buffer.append(classMetaData.getClassName()).append("> ");
