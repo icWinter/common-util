@@ -1,10 +1,10 @@
 package com.cn.stardust.tool.codegen.sql;
 
-import com.beust.jcommander.internal.Lists;
 import com.cn.stardust.tool.codegen.CamelCaseConvert;
 import com.cn.stardust.tool.codegen.metadata.ClassMetaData;
 import com.cn.stardust.tool.codegen.metadata.FieldMetaData;
 import com.cn.stardust.tool.codegen.typeconvert.Convert;
+import com.google.common.collect.Lists;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

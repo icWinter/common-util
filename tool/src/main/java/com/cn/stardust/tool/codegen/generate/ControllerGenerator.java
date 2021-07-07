@@ -65,7 +65,7 @@ final public class ControllerGenerator extends AbstractGenerator{
         buffer.append(Character.getSpace(4) + "@ApiOperation(value = \"新增"
                 +CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName())+"\")"+ Character.LINE_FEED);
         buffer.append(Character.getSpace(4) + "@PostMapping(\"/add\")"+ Character.LINE_FEED);
-        buffer.append(Character.getSpace(4) + "public ReturnData add(");
+        buffer.append(Character.getSpace(4) + "public ResultData add(");
         buffer.append("@RequestBody ").append(classMetaData.getClassName()).append(Character.SPACE)
                 .append(CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName()))
                 .append(") throws Exception {").append(Character.LINE_FEED);
@@ -81,7 +81,7 @@ final public class ControllerGenerator extends AbstractGenerator{
         buffer.append(Character.getSpace(4) + "@ApiOperation(value = \"修改"
                 +CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName())+"\")"+ Character.LINE_FEED);
         buffer.append(Character.getSpace(4) + "@PostMapping(\"/modify\")"+ Character.LINE_FEED);
-        buffer.append(Character.getSpace(4) + "public ReturnData modify(");
+        buffer.append(Character.getSpace(4) + "public ResultData modify(");
         buffer.append("@RequestBody ").append(classMetaData.getClassName()).append(Character.SPACE)
                 .append(CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName()))
                 .append(") throws Exception {").append(Character.LINE_FEED);
@@ -97,7 +97,7 @@ final public class ControllerGenerator extends AbstractGenerator{
         buffer.append(Character.getSpace(4) + "@ApiOperation(value = \"删除"
                 +CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName())+"\")"+ Character.LINE_FEED);
         buffer.append(Character.getSpace(4) + "@PostMapping(\"/remove\")"+ Character.LINE_FEED);
-        buffer.append(Character.getSpace(4) + "public ReturnData remove(");
+        buffer.append(Character.getSpace(4) + "public ResultData remove(");
         buffer.append("@RequestParam(\""+CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName()) +"Id\")");
         buffer.append("String ").append(CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName()) +"Id)");
         buffer.append(" throws Exception {").append(Character.LINE_FEED);
@@ -113,7 +113,7 @@ final public class ControllerGenerator extends AbstractGenerator{
         buffer.append(Character.getSpace(4) + "@ApiOperation(value = \"搜索"
                         +CamelCaseConvert.toLowerCamelCase(classMetaData.getClassName())+"\")"+ Character.LINE_FEED);
         buffer.append(Character.getSpace(4) + "@GetMapping(\"/search\")"+ Character.LINE_FEED);
-        buffer.append(Character.getSpace(4) + "public ReturnData search(@RequestParam(value = \"pageSize\", defaultValue = \"10\") Integer pageSize,"+ Character.LINE_FEED);
+        buffer.append(Character.getSpace(4) + "public ResultData search(@RequestParam(value = \"pageSize\", defaultValue = \"10\") Integer pageSize,"+ Character.LINE_FEED);
         buffer.append(Character.getSpace(29)).append("@RequestParam(value = \"pageNum\", defaultValue = \"1\") Integer pageNum");
         buffer.append(") throws Exception {").append(Character.LINE_FEED);
         buffer.append(Character.getSpace(8)).append("return super.search(")
@@ -127,7 +127,7 @@ final public class ControllerGenerator extends AbstractGenerator{
          */
         buffer.append(Character.getSpace(4) + "@ApiOperation(value = \"获取"+classMetaData.getClassName()+"\")"+ Character.LINE_FEED);
         buffer.append(Character.getSpace(4) + "@GetMapping(\"/get\")"+ Character.LINE_FEED);
-        buffer.append(Character.getSpace(4)+"public ReturnData get(");
+        buffer.append(Character.getSpace(4)+"public ResultData get(");
         buffer.append("@RequestParam(\""+CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName()) +"Id\")");
         buffer.append("String ").append(CamelCaseConvert.toLowerCamelCase(classMetaData.getTableName()) +"Id)");
         buffer.append(" throws Exception{").append(Character.LINE_FEED);
