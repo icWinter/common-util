@@ -17,7 +17,7 @@ public class WordWriter {
     private XWPFDocument document;
 
     private void init(){
-        inputStream = this.getClass().getResourceAsStream("/tempete/table.docx");
+        inputStream = this.getClass().getResourceAsStream("/templete/table.docx");
         try {
             document = new XWPFDocument(inputStream);
         }catch (Exception e){

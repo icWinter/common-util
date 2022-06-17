@@ -40,10 +40,10 @@ public class Export2Word {
      * @param args
      */
     public static void main(String[] args) {
-        Query mysqlQuery = new MysqlQuery("127.0.0.1","dev","mysql","123456");
+        Query mysqlQuery = new MysqlQuery("192.168.0.111","museum","mysql","mysql");
         DatabaseMetadata metadata = mysqlQuery.query();
         WordWriter wordWriter = new WordWriter();
-        wordWriter.export(metadata,"C:/Users/MyPC/Desktop");
+        wordWriter.export(metadata,"C:\\Users\\14256\\Desktop");
         System.out.println("================ Export Finished! ================");
     }
 

@@ -67,7 +67,7 @@ public class MysqlQuery implements Query {
                 System.err.println("驱动:com.mysql.jdbc.Driver 加载失败!");
                 Class.forName(JDBC_JC_DRIVER);
             }
-            connection = connect("jdbc:mysql://"+dbIP+":"+dbPort+"/"+dbName+"?characterEncoding=utf8&useSSL=false",dbUsername,dbPassword);
+            connection = connect("jdbc:mysql://"+dbIP+":"+dbPort+"/"+dbName+"?characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai",dbUsername,dbPassword);
             metaDataList = queryTable(connection);
             queryColumn(connection,metaDataList);
             metadata = new DatabaseMetadata(dbIP,dbPort,dbName,dbUsername,metaDataList);
