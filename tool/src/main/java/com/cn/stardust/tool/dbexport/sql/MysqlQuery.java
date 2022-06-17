@@ -14,6 +14,7 @@ public class MysqlQuery implements Query {
 
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 
+    private static final String JDBC_JC_DRIVER = "com.mysql.cj.jdbc.Driver";
     /**
      * 数据库ip
      */
@@ -60,14 +61,19 @@ public class MysqlQuery implements Query {
         List<TableMetadata> metaDataList;
         DatabaseMetadata metadata = null;
         try {
-            Class.forName(JDBC_DRIVER);
+            try {
+                Class.forName(JDBC_DRIVER);
+            }catch (Exception e){
+                System.err.println("驱动:com.mysql.jdbc.Driver 加载失败!");
+                Class.forName(JDBC_JC_DRIVER);
+            }
             connection = connect("jdbc:mysql://"+dbIP+":"+dbPort+"/"+dbName+"?characterEncoding=utf8&useSSL=false",dbUsername,dbPassword);
             metaDataList = queryTable(connection);
             queryColumn(connection,metaDataList);
             metadata = new DatabaseMetadata(dbIP,dbPort,dbName,dbUsername,metaDataList);
         }catch (Exception e){
             e.printStackTrace();
-            System.err.println("数据库操作失败!");
+            System.err.println("数据库连接失败!");
         }finally {
             if(null != connection){
                 close(connection);

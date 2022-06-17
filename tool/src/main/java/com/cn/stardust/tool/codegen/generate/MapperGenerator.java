@@ -134,7 +134,7 @@ final class MapperGenerator extends AbstractGenerator {
         buffer.append(Character.LINE_FEED);
         buffer.append(Character.getSpace(12) + "// TODO ADD MORE CONDITIONS! ");
         buffer.append(Character.LINE_FEED);
-        buffer.append(Character.getSpace(12) + "\"1 = 1 order by id desc </script>\"})");
+        buffer.append(Character.getSpace(12) + "\"archive = 0 order by create_at desc </script>\"})");
         buffer.append(Character.LINE_FEED);
         buffer.append(Character.getSpace(4) + "List"+ Character.OPEN_ANGULAR_BRACKETS + classMetaData.getClassName()+ Character.CLOSE_ANGULAR_BRACKETS);
         buffer.append(Character.SPACE);
