@@ -1,7 +1,7 @@
 package com.cn.stardust.star.codegen;
 
 /**
- * https://github.com/oraclexing
+ * https://github.com/icWinter
  * <p>
  *  驼峰式字符串转换
  *

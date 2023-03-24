@@ -8,7 +8,7 @@ import java.sql.DriverManager;
 import java.util.List;
 
 /**
- * https://github.com/oraclexing
+ * https://github.com/icWinter
  * <p>
  * SQL 查询接口
  *

@@ -5,7 +5,7 @@ import com.cn.stardust.star.codegen.CamelCaseConvert;
 import java.io.File;
 
 /**
- * https://github.com/oraclexing
+ * https://github.com/icWinter
  * <p>
  *  ServiceImpl 层的生成器
  *

@@ -8,7 +8,7 @@ import java.util.Optional;
 import java.util.Set;
 
 /**
- * https://github.com/oraclexing
+ * https://github.com/icWinter
  * <p>
  *  序列化工具类, 支持多线程下操作,
  *  快速序列化反序列化Util,
@@ -56,7 +56,7 @@ public class FstUtil {
      * @param <T>
      * @return
      */
-    public static <T> T unserializer(byte[] data) {
+    public static <T> T unSerializer(byte[] data) {
         return (T) Optional.ofNullable(fstConfigurationThreadLocal.get()).orElseGet(() ->
         {
             fstConfigurationThreadLocal.set(fstConfiguration);
@@ -77,7 +77,7 @@ public class FstUtil {
         if (null == t) {
             return null;
         }
-        return unserializer(serializer(t));
+        return unSerializer(serializer(t));
     }
 
 
@@ -91,7 +91,7 @@ public class FstUtil {
         if (null == list) {
             return null;
         }
-        return unserializer(serializer(list));
+        return unSerializer(serializer(list));
     }
 
     /**
@@ -105,7 +105,7 @@ public class FstUtil {
         if (null == arrs) {
             return null;
         }
-        return unserializer(serializer(arrs));
+        return unSerializer(serializer(arrs));
     }
 
     /**
@@ -119,6 +119,6 @@ public class FstUtil {
         if (null == set) {
             return null;
         }
-        return unserializer(serializer(set));
+        return unSerializer(serializer(set));
     }
 }

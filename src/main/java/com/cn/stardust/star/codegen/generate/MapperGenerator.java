@@ -5,7 +5,7 @@ import com.cn.stardust.star.codegen.CamelCaseConvert;
 import java.io.File;
 
 /**
- * https://github.com/oraclexing
+ * https://github.com/icWinter
  * <p>
  * mapper 层生成器
  *

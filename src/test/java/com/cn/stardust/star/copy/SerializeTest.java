@@ -51,7 +51,7 @@ public class SerializeTest {
         phone.setConcurrentHashMap(concurrentHashMap);
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         outputStream.write(FstUtil.serializer(phone));
-        Phone copy = FstUtil.unserializer(outputStream.toByteArray());
+        Phone copy = FstUtil.unSerializer(outputStream.toByteArray());
         System.out.println(phone.equals(copy));
     }
 

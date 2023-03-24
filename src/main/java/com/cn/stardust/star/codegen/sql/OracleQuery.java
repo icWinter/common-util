@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * https://github.com/oraclexing
+ * https://github.com/icWinter
  * <p>
  * Oracle sql查询器
  *
